@@ -1,0 +1,43 @@
+.boxe{
+    width: 500px;
+    height: 500px;
+    margin: 100px auto;
+    background-image: url(image/IMG_20220830_125347.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+.boxe:before{
+    background-color: blue;
+    width: 250px;
+    height: 500px;
+    content: '';
+    display: block;
+    clear: both;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 2s;
+}
+.boxe:after{
+    background-color: blue;
+    width: 250px;
+    height: 500px;
+    content: '';
+    display: block;
+    clear: both;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: 2s;
+}
+.boxe:hover:before{
+    left: -250px;
+    transform: rotatey(180deg);
+    background-color: yellowgreen;
+}
+.boxe:hover:after{
+    right: -250px;
+    transform: rotatey(180deg);
+    background-color: yellowgreen;
+}
